@@ -1,0 +1,24 @@
+{
+  "name": "udi-application-appointment-check",
+  "version": "1.0.0",
+  "description": "Simple check for UDI appointment availability",
+  "main": "index.js",
+  "dependencies": {
+    "chromedriver": "^84.0.1",
+    "selenium-side-runner": "^3.17.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "selenium-side-runner check-udi.side"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdubya/udi-application-appointment-check.git"
+  },
+  "author": "Gareth Western",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdubya/udi-application-appointment-check/issues"
+  },
+  "homepage": "https://github.com/gdubya/udi-application-appointment-check#readme"
+}
