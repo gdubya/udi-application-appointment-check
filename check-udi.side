@@ -26,7 +26,7 @@
         ["xpath=//div[@id='api']/div/div[4]/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "%USERNAME%"
+      "value": "%UDI_USERNAME%"
     }, {
       "id": "ae667d98-b610-4cc8-84ab-b0c3d80a0a79",
       "comment": "",
@@ -40,7 +40,7 @@
         ["xpath=//div[@id='api']/div/div[4]/div[2]/input", "xpath:idRelative"],
         ["xpath=//div[2]/input", "xpath:position"]
       ],
-      "value": "%PASSWORD%"
+      "value": "%UDI_PASSWORD%"
     }, {
       "id": "0fe27702-39db-4573-bc03-ba508a183ba3",
       "comment": "",
