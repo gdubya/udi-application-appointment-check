@@ -17,11 +17,8 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      echo "Username is $(UDI_USERNAME)"
       ESCAPED_PW=$(printf '%s\n' "$(UDI_PASSWORD)" | sed -e 's/[\/&]/\\&/g')
-      echo "PW is $ESCAPED_PW"
       sed -e "s/%UDI_USERNAME%/$(UDI_USERNAME)/" -e "s/%UDI_PASSWORD%/$ESCAPED_PW/" check-udi.side > parsed.side
-      cat parsed.side
 - task: Bash@3
   inputs:
     targetType: 'inline'
