@@ -19,7 +19,4 @@ steps:
     script: |
       ESCAPED_PW=$(printf '%s\n' "$(UDI_PASSWORD)" | sed -e 's/[\/&]/\\&/g')
       sed -e "s/%UDI_USERNAME%/$(UDI_USERNAME)/" -e "s/%UDI_PASSWORD%/$ESCAPED_PW/" check-udi.side > parsed.side
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'npx selenium-side-runner -c "browserName=chrome goog:chromeOptions.args=[disable-infobars, headless]" parsed.side'
+      npx selenium-side-runner -c "browserName=chrome goog:chromeOptions.args=[disable-infobars, headless]" parsed.side
