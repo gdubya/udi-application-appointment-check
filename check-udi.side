@@ -1,0 +1,109 @@
+{
+  "id": "b62dfc1d-c511-4e64-9956-0ffd49e8eac6",
+  "version": "2.0",
+  "name": "UDI",
+  "url": "https://my.udi.no",
+  "tests": [{
+    "id": "a48caae0-a218-4831-8e27-7fa7e1d832ba",
+    "name": "UDI application checker",
+    "commands": [{
+      "id": "9ef6908f-29eb-40f4-b46c-a0a12bb27ad4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ab3238a-d8f8-45cf-a7f3-63ca8869d2f9",
+      "comment": "",
+      "command": "type",
+      "target": "id=logonIdentifier",
+      "targets": [
+        ["id=logonIdentifier", "id"],
+        ["name=Username or email address", "name"],
+        ["css=#logonIdentifier", "css:finder"],
+        ["xpath=//input[@id='logonIdentifier']", "xpath:attributes"],
+        ["xpath=//div[@id='api']/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "%USERNAME%"
+    }, {
+      "id": "ae667d98-b610-4cc8-84ab-b0c3d80a0a79",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='api']/div/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "%PASSWORD%"
+    }, {
+      "id": "0fe27702-39db-4573-bc03-ba508a183ba3",
+      "comment": "",
+      "command": "click",
+      "target": "id=next",
+      "targets": [
+        ["id=next", "id"],
+        ["css=#next", "css:finder"],
+        ["xpath=//button[@id='next']", "xpath:attributes"],
+        ["xpath=//div[@id='api']/div/div[4]/div[5]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logg inn med passord')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db3f2622-2ba6-4521-b8df-c6c505611324",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Gå til søknad",
+      "targets": [
+        ["linkText=Gå til søknad", "linkText"],
+        ["css=.Button__btn___3uXHU", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[7]/div/div/div[2]/table/tbody/tr/td[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://applications.udi.no/ctsa/kvittering/37b303ec-e9a2-459d-86e0-5bbc3cd8253c')]", "xpath:href"],
+        ["xpath=//td[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gå til søknad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6bb994d-f0c4-497b-ac47-35b3696ea047",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.light-gold p",
+      "targets": [
+        ["css=.light-gold p", "css:finder"],
+        ["xpath=//div[@id='root']/div/main/div/div/div/div[2]/div/div[2]/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/p", "xpath:position"]
+      ],
+      "value": "Unfortunately, there are no available appointments at the place where you are going to hand in your application. You will be able to book an appointment when the police station (or embassy/consulate) opens new appointments, or if somebody else cancels their appointment. You cannot get an appointment by contacting the UDI. Due to the corona situation, it will take some time before new appointments become available. You must log in again to see if there are any free appointments."
+    }, {
+      "id": "e84b67e8-8afa-4c7d-8527-18c452c51207",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log out (Gareth Western)",
+      "targets": [
+        ["linkText=Log out (Gareth Western)", "linkText"],
+        ["css=.logout > a", "css:finder"],
+        ["xpath=//div[@id='root']/div/header/div[2]/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/account/logout/en')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log out (Gareth Western)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "df4265db-c0fc-4679-9b9a-930af866d616",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a48caae0-a218-4831-8e27-7fa7e1d832ba"]
+  }],
+  "urls": ["https://my.udi.no/"],
+  "plugins": []
+}
