@@ -1,7 +1,7 @@
 
 schedules:
   - cron: "*/30 * * * *"
-    displayName: "Hourly test"
+    displayName: "Test schedule"
     branches:
       include:
         - master
