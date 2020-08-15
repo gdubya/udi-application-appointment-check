@@ -2,8 +2,8 @@ trigger:
 - master
 
 variables:
-  UDI_USERNAME: $(UDI_USERNAME)
-  UDI_PASSWORD: $(UDI_PASSWORD)
+  UDI_USERNAME: $(udiUser)
+  UDI_PASSWORD: $(udiPass)
 
 pool:
   vmImage: 'ubuntu-latest'
