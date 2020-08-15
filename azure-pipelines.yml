@@ -1,6 +1,6 @@
 
 schedules:
-  - cron: "*/30 * * * *"
+  - cron: "*/30 6-19 * * *"
     displayName: "Test schedule"
     branches:
       include:
