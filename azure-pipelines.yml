@@ -17,4 +17,4 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'npx selenium-side-runner parsed.side'
+    script: 'npx selenium-side-runner parsed.side -c "browserName=firefox"'
