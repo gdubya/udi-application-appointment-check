@@ -4,7 +4,7 @@
   "description": "Simple check for UDI appointment availability",
   "main": "index.js",
   "dependencies": {
-    "geckodriver": "^1.20.0",
+    "chromedriver": "^84.0.1",
     "selenium-side-runner": "^3.17.0"
   },
   "devDependencies": {},
