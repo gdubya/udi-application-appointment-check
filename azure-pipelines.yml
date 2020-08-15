@@ -17,4 +17,4 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'npx selenium-side-runner -c "goog:chromeOptions.args=[disable-infobars, headless]" parsed.side'
+    script: 'npx selenium-side-runner -c "browserName=chrome goog:chromeOptions.args=[disable-infobars, headless]" parsed.side'
