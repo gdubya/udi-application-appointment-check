@@ -1,12 +1,4 @@
 
-schedules:
-  - cron: "*/30 6-19 * * *"
-    displayName: "Test schedule"
-    branches:
-      include:
-        - master
-    always: false
-
 trigger:
 - master
 
